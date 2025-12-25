@@ -1,0 +1,10 @@
+[project]
+name = "better-image-naming"
+version = "0.1.0"
+description = "Rename an image file based on its content using a vLLM served by local ollama"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "ollama~=0.6.1",
+    "typer>=0.20.1",
+]
