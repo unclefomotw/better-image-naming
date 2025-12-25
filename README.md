@@ -45,13 +45,22 @@ The easiest way to install is using `uv`, a fast Python package installer and re
 
 ### Installation as a System Command (Optional)
 
-To install globally and use without `uv run`:
+To install globally and use `imgname` directly from anywhere without `uv run`:
 
 ```bash
-uv pip install .
+uv tool install .
 ```
 
-Then you can use `imgname` directly from anywhere.
+This installs `imgname` as a global command. After installation, you can use it in any directory:
+
+```bash
+imgname path/to/image.jpg
+```
+
+To uninstall:
+```bash
+uv tool uninstall imgname
+```
 
 ## Usage
 
