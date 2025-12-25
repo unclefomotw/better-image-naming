@@ -27,9 +27,8 @@ Automatically rename image files based on their content using AI-powered visual 
 The easiest way to install is using `uv`, a fast Python package installer and resolver.
 
 1. Install uv if you haven't already:
-   ```bash
-   curl -LsSf https://astral.sh/uv/install.sh | sh
-   ```
+
+   See the [official installation guide](https://docs.astral.sh/uv/getting-started/installation/) for your platform.
 
 2. Clone and install the project:
    ```bash
