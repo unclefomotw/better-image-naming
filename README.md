@@ -4,7 +4,7 @@ Automatically rename image files based on their content using AI-powered visual 
 
 ## Features
 
-- Analyzes images using Ollama vision models to understand content
+- Analyzes images using **local** Ollama vision models to understand content
 - Generates descriptive filenames in format: `YYYYMMDDHHMMSS_<Content>.ext`
 - Timestamp from file's modification time (UTC)
 - Content description limited to 3 words maximum
@@ -125,6 +125,16 @@ Options:
 - `--in-place` - Rename file in place instead of creating a copy
 - `--help` - Show help message
 
+### Rename many images
+
+The command itself renames one image at a time.  But you can use `find` or a loop to rename many images.
+
+Example:
+
+```bash
+find ~/Screenshots -name 'Screenshot*.png' -exec imgname {} \;
+```
+
 ## Filename Format
 
 Generated filenames follow this format:
@@ -144,12 +154,7 @@ Examples:
 
 ## Supported Models
 
-Any Ollama vision model should work. Popular choices:
-- `gemma3:4b` (default, lightweight)
-- `gemma3:7b` (more accurate)
-- `llava:7b`
-- `llava:13b`
-- `bakllava`
+Any Ollama **vision** model should work.
 
 List your available models:
 ```bash
